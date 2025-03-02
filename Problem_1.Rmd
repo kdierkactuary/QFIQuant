@@ -7,4 +7,9 @@ output:
 
 # Problem 1
 
-Consider the following process X~t~
+Consider the following process X~t~ for $t \in [0, 1]$. X~0~ = X~1~ = 0.
+For 0 < t < 1, X~t~ is defined as:
+
+$$ X_t = (1-t)   \int_{0}^{t} \frac{1}{1-u} \,du $$
+
+Note: For parts (a) and (b), find the SDE over 0 < t < 1 for the process X~t~ defined for $0 \le t \le 1$.
