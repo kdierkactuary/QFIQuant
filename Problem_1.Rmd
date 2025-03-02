@@ -6,8 +6,6 @@ output:
   word_document: default
 ---
 
-# Problem 1
-
 Consider the following process X~t~ for $t \in [0, 1]$. X~0~ = X~1~ = 0.
 For 0 < t < 1, X~t~ is defined as:
 
@@ -42,4 +40,4 @@ $$ dF_t = 2X_t(-\frac{X_t}{(1-t)}dt+dW_t)+dt$$
 $$ dF_t = (-\frac{2X_t^2}{(1-t)}dt+2X_tdW_t)+dt$$
 $$ dF_t = (1-\frac{2X_t^2}{(1-t)})dt+2X_tdW_t$$
 
-F_t is not a martingale because dF~t~ has a drift term. 
+F~t~ is not a martingale because dF~t~ has a drift term. 
