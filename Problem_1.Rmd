@@ -13,3 +13,5 @@ For 0 < t < 1, X~t~ is defined as:
 $$ X_t = (1-t)   \int_{0}^{t} \frac{1}{1-u} \,du $$
 
 Note: For parts (a) and (b), find the SDE over 0 < t < 1 for the process X~t~ defined for $0 \le t \le 1$.
+
+(a) Determine the stochastic differential equation dX~t~. Is X~t~ a martingale?
