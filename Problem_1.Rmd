@@ -3,6 +3,7 @@ title: "Problem_1"
 output:
   pdf_document: default
   html_document: default
+  word_document: default
 ---
 
 # Problem 1
@@ -27,3 +28,18 @@ $$ (1-t)dX_t = -X_t dt + (1-t) dW_t $$
 $$ dX_t = -\frac{X_t}{(1-t)}dt+dW_t$$
 
 X~t~ is not a martingale because dX~t~ has a drift component. 
+
+(b) Determine the stochastic differential equation dF~t~ where $F_t = X_t^2$. Is F~t~ a martingale?
+
+Use Ito's Lemma:
+
+$$ \frac{\partial F_t}{\partial t} = 0 $$
+$$ \frac{\partial F_t}{\partial X_t} = 2X_t $$
+$$ \frac{\partial^2 F_t}{\partial X_t^2} = 2$$
+
+$$ dF_t = 0 dt+2X_tdX_t+\frac{1}{2}2(dX_t)^2$$
+$$ dF_t = 2X_t(-\frac{X_t}{(1-t)}dt+dW_t)+dt$$
+$$ dF_t = (-\frac{2X_t^2}{(1-t)}dt+2X_tdW_t)+dt$$
+$$ dF_t = (1-\frac{2X_t^2}{(1-t)})dt+2X_tdW_t$$
+
+F_t is not a martingale because dF~t~ has a drift term. 
