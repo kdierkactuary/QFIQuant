@@ -6,3 +6,5 @@ output:
 ---
 
 # Problem 1
+
+Consider the following process X~t~
