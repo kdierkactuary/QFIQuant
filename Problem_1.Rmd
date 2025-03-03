@@ -41,3 +41,9 @@ $$ dF_t = (-\frac{2X_t^2}{(1-t)}dt+2X_tdW_t)+dt$$
 $$ dF_t = (1-\frac{2X_t^2}{(1-t)})dt+2X_tdW_t$$
 
 F~t~ is not a martingale because dF~t~ has a drift term. 
+
+(c) Calculate E~0~(X~t~)
+
+$$E_0(X_t) = E_0((1-t)\int_{0}^{t} \frac{1}{1-u} \,dW_u) = 0$$
+
+Ito integral.
