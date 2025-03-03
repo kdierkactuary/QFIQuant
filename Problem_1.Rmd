@@ -47,3 +47,14 @@ F~t~ is not a martingale because dF~t~ has a drift term.
 $$E_0(X_t) = E_0((1-t)\int_{0}^{t} \frac{1}{1-u} \,dW_u) = 0$$
 
 Ito integral.
+
+(d) Show that:
+$$ Cov(X_s,X_t) = (1-s) (1-t) Var(\int_{0}^{s} \frac{1}{1-u} \, dW_u) $$
+for $s \le t$ and $s, t  \in [0,1]$
+
+Hint: Use the fact that $$ Cov(\int_{0}^{s} \frac{1}{1-u}\, dW_u, Cov(\int_{s}^{t} \frac{1}{1-u}\, dW_u = 0 $$
+
+$$ Cov(X_s,X_t) = Cov((1-s) \int_{0}^{s} \frac{1}{1-u}\, dW_u, (1-t) \int_{0}^{t} \frac{1}{1-u}\, dW_u) $$
+$$ Cov(X_s,X_t) = Cov((1-s) \int_{0}^{s} \frac{1}{1-u}\, dW_u, (1-t) \int_{0}^{s} \frac{1}{1-u}\, dW_u) $$
+$$ Cov(X_s,X_t) = (1-s)(1-t)Cov( \int_{0}^{s} \frac{1}{1-u}\, dW_u, \int_{0}^{s} \frac{1}{1-u}\, dW_u) $$
+$$ Cov(X_s,X_t) = (1-s)(1-t)Var( \int_{0}^{s} \frac{1}{1-u}\, dW_u) $$
