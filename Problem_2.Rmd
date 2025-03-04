@@ -5,3 +5,6 @@ date: "2025-03-04"
 ---
 
 (a) Describe term premium. If the term premium is positive, do you expect the risk-neutral or real-world expected path of the risk-free rate to be higher? 
+\setlength{\leftskip}{3cm}
+The term premium refers to the enhanced yield demanded by investors to invest in fixed income securities for longer periods of time. If the term premium is positive, I would expect the risk-neutral path of the risk-free rate to be higher because it would reflect the positive term premium. 
+\setlength{\leftskip}{0cm}
