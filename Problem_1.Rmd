@@ -58,3 +58,28 @@ $$ Cov(X_s,X_t) = Cov((1-s) \int_{0}^{s} \frac{1}{1-u}\, dW_u, (1-t) \int_{0}^{t
 $$ Cov(X_s,X_t) = Cov((1-s) \int_{0}^{s} \frac{1}{1-u}\, dW_u, (1-t) \int_{0}^{s} \frac{1}{1-u}\, dW_u) $$
 $$ Cov(X_s,X_t) = (1-s)(1-t)Cov( \int_{0}^{s} \frac{1}{1-u}\, dW_u, \int_{0}^{s} \frac{1}{1-u}\, dW_u) $$
 $$ Cov(X_s,X_t) = (1-s)(1-t)Var( \int_{0}^{s} \frac{1}{1-u}\, dW_u) $$
+(e) Calculate the following for $s \le t$ and s,t $s, t  \in [0,1]$:  
+
+\setlength{\leftskip}{3cm}
+(i) Cov(X~s~,X~t~)   
+From part (d)
+$$ Cov(X_s,X_t) = (1-s)(1-t)Var( \int_{0}^{s} \frac{1}{1-u}\, dW_u)$$
+$$ Cov(X_s,X_t) = (1-s)(1-t)(E[( \int_{0}^{s} \frac{1}{1-u}\, dW_u)^2]-E[ \int_{0}^{s} \frac{1}{1-u}\, dW_u])$$
+$$ Cov(X_s,X_t) = (1-s)(1-t)(E[( \int_{0}^{s} \frac{1}{1-u}\, dW_u)^2])$$
+By Ito's Isometry
+$$ Cov(X_s,X_t) = (1-s)(1-t)(E[( \int_{0}^{s} \frac{1}{(1-u)^2}\, du)])$$
+$$ Cov(X_s,X_t) = (1-s)(1-t)(E[ \left. \frac{1}{1-u} \right|_{0}^{s}])$$
+$$ Cov(X_s,X_t) = (1-s)(1-t)(\frac{1}{1-s} - 1)$$
+$$ Cov(X_s,X_t) = (1-s)(1-t)(\frac{1}{1-s} - 1)$$
+$$ Cov(X_s,X_t) = s(1-t)$$
+
+(ii) Var(X~t~)
+$$ Var(X_t) = Var((1-t) \int_{0}^{t} \frac{1}{1-u}\, dW_u)$$
+$$ Var(X_t) = E(((1-t) \int_{0}^{t} \frac{1}{1-u}\, dW_u)^2) - E((1-t) \int_{0}^{t} \frac{1}{1-u}\, dW_u)^2$$
+$$ Var(X_t) = E(((1-t) \int_{0}^{t} \frac{1}{1-u}\, dW_u)^2)$$
+By Ito's Isometry
+$$ Var(X_t) = E((1-t)^2 \int_{0}^{t} \frac{1}{(1-u)^2}\, du)$$
+$$ Var(X_t) = (1-t)^2 (\left. \frac{1}{1-u} \right|_{0}^{t})$$
+$$ Var(X_t) = (1-t)^2 (\frac{1}{1-t}-1)$$
+$$ Var(X_t) = t(1-t)$$
+\setlength{\leftskip}{0pt}
