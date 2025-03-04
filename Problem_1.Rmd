@@ -83,3 +83,12 @@ $$ Var(X_t) = (1-t)^2 (\left. \frac{1}{1-u} \right|_{0}^{t})$$
 $$ Var(X_t) = (1-t)^2 (\frac{1}{1-t}-1)$$
 $$ Var(X_t) = t(1-t)$$
 \setlength{\leftskip}{0pt}
+
+(f) Find $t \in [0,1]$ such that $Var(X_t)$ is :
+
+\setlength{\leftskip}{3cm}
+(i) Minimized  
+$Var(X_t)$ is minimized when t = 0 or t = 1.  
+(ii) Maximized   
+$Var(X_t)$ is maximized when $t = \frac{1}{2}$
+\setlength{\leftskip}{0pt}
