@@ -5,8 +5,49 @@ output:
   word_document: default
 ---
 
-(a) Describe term premium. If the term premium is positive, do you expect the risk-neutral or real-world expected path of the risk-free rate to be higher?  
-
+(a) Describe term premium. If the term premium is positive, do you expect the risk-neutral or real-world expected path of the risk-free rate to be higher?    
 
 The term premium refers to the enhanced yield demanded by investors to invest in fixed income securities for longer periods of time. If the term premium is positive, I would expect the risk-neutral path of the risk-free rate to be higher because it would reflect the positive term premium. 
- 
+
+(b) How do term premiums typically vary with term to maturity?  
+
+Term premiums usually increase with term to maturity.
+
+(c) Analyze the following: "Risk-neutral scenarios are always market consistent, whereas real-world scenarios are not."  
+
+The statement is false. While it is true that real-world scenarios may not be market consistent, they can be.
+
+(d) Recommend whether risk-neutral or real-world scenarios are most appropriate for each of the following situations.  
+
+\setlength{\leftskip}{7cm}
+i. Management wants to answer "what-if" questions and look at how bad things could get.  
+Real-World
+ii. Valuing an item with uncertain payoff in a market-consistent way.  
+Risk-Neutral
+
+
+iii. Understanding simulation across time, where the simulation involves making investment purchases in the future.  
+Real-World 
+
+
+iv. Risk Management applications and understanding black swan events.  
+Real-World
+
+
+v. Management wants to know how much capital is needed to absorb the potential earnings loss in the current low interest rate environment.  
+Real-World
+
+
+vi. To calculate the hedging cost when pricing a new Universal Life product with a minimum crediting rate guarantee.  
+Risk-Neutral
+
+\setlength{\leftskip}{0pt}
+
+(e) Suppose you are given the folllowing about a Vasicek interest rate model:
+$$dr = \kappa (\theta - r)dt + \sigma d\overline{W} $$
+$$ d\overline{W} = dW + \lambda dt$$
+ Show how to compute the risk neutral parameters $\hat{\theta}$, $\kappa$, $\theta$, $\sigma$ and $\lambda$.
+ $$dr = \kappa (\theta - r)dt + \sigma d\overline{W} $$
+ $$dr = \kappa (\theta - r)dt + \sigma (dW + \lambda dt) $$
+ $$dr = \kappa (\theta + \frac{\sigma\lambda}{\kappa} - r)dt + \sigma (dW + \lambda dt) $$
+ So $\hat{\theta}=\theta + \frac{\sigma\lambda}{\kappa}$
