@@ -51,3 +51,20 @@ $$ d\overline{W} = dW + \lambda dt$$
  $$dr = \kappa (\theta - r)dt + \sigma (dW + \lambda dt) $$
  $$dr = \kappa (\theta + \frac{\sigma\lambda}{\kappa} - r)dt + \sigma (dW + \lambda dt) $$
  So $\hat{\theta}=\theta + \frac{\sigma\lambda}{\kappa}$
+ 
+ (f) Suppose you are given the following about the Cox-Ingersoll-Ross (CIR) interest rate model:
+$$ dr = \kappa(\theta-r_t)dt + \sigma \sqrt{r_t}d\overline{W} $$
+$$ d\overline{W} = dW - \frac{\lambda\sqrt{r_t}}{\sigma}dt $$
+
+Show how to compute the risk-neutral parameters $\overline{\kappa}$ and $\overline{\theta}$ given $\kappa$, $\theta$, $\sigma$ and $\lambda$.
+
+$$ dr = \kappa(\theta-r_t)dt + \sigma \sqrt{r_t}d\overline{W} $$
+$$ dr = \kappa(\theta-r_t)dt + \sigma \sqrt{r_t}(dW - \frac{\lambda\sqrt{r_t}}{\sigma}dt)$$
+$$ dr = \kappa(\theta-r_t- \frac{\lambda\sqrt{r_t}}{\sigma})dt + \sigma \sqrt{r_t}dW$$
+$$ dr = \kappa(\theta-r_t - \frac{\lambda r_t}{\kappa})dt + \sigma \sqrt{r_t}dW$$
+$$ dr = (\theta \kappa - r_t \kappa - \lambda r_t)dt + \sigma \sqrt{r_t}dW$$
+$$ dr = (\theta \kappa - (\kappa + \lambda) r_t)dt + \sigma \sqrt{r_t}dW$$
+$$ dr = (\kappa + \lambda)(\frac{\theta\kappa}{\kappa+\lambda} -  r_t)dt + \sigma \sqrt{r_t}dW$$
+So,
+$$ \overline{\kappa} = \kappa + \lambda$$
+$$ \overline{\theta} = \frac{\theta\kappa}{\kappa+\lambda}$$
