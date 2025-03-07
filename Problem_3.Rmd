@@ -1,0 +1,7 @@
+---
+title: "Problem_3"
+output: pdf_document
+
+---
+
+Suppose at time $t = 0$, we are given
