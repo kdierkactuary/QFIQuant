@@ -4,4 +4,15 @@ output: pdf_document
 
 ---
 
-Suppose at time $t = 0$, we are given
+Suppose at time $t = 0$, we are given four zero-coupon bond prices {B~1~, B~2~, B~3~, B~4~} that mature at times $t = 1, 2, 3, 4$. This forms the term structure of interest rates.  
+  
+We also have one-period forward rates {f~0~, f~1~, f~2~, f~3~} where each f~i~ is the rate contracted at time $t = 0$ on a loan that begins at time $t = i$ and ends at time $t = i + 1$. In other words, if a borrower borrowns \$N at time $t = i$, he or she will pay back \$N(1 + f~i~) at time $t = i + 1$. The spot rate is denoted by r~i~. Clearly, $r_0 = f_o$. The {B~i~} and all forward loans are default free.  
+  
+At each time period there are two possible states of the world, denoted by {u~i~,d~i~} for $i = 1, 2, 3, 4 $.
+  
+i  | B~i~ | f~i-1~
+-- | ---- | ------
+1  | .90  | .08
+2  | .87  | .09
+3  | .82  | .10
+4  | .75  | .18
