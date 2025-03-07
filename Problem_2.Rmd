@@ -68,3 +68,6 @@ $$ dr = (\kappa + \lambda)(\frac{\theta\kappa}{\kappa+\lambda} -  r_t)dt + \sigm
 So,
 $$ \overline{\kappa} = \kappa + \lambda$$
 $$ \overline{\theta} = \frac{\theta\kappa}{\kappa+\lambda}$$
+
+(g) Suppose the risk-neutral and real-world instantaneous forward rate curves are reviewed for reasonableness. You are told that the risk-netutral curve is higher than the real-world curve, and the difference between the two curves is roughly constant across all maturities. Assess whether this is reasonable.  
+It is reasonable that the risk-netural curve is higher than the real-world curve. However, it is not reasonable that that the difference is constant across all maturities. The risk-neutral curve should have an embedded term premium baked in. So the difference between the two curves should rise rapidly with term to maturity and then level off. 
