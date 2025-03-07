@@ -15,4 +15,18 @@ i  | B~i~ | f~i-1~
 1  | .90  | .08
 2  | .87  | .09
 3  | .82  | .10
-4  | .75  | .18
+4  | .75  | .18  
+
+(a) At time $i = 0$, how many possible states of the world are there at $i = 3$?  
+There are $2^3 = 8$ possible states of the world at $i = 3$.  
+
+(b) Form an arbitrage portfolio that will guarantee a positive payoff at time i = 0 and non-negative payoff at times $i \ge{1}$.  
+
+An arbitrage portfolio that guarantees a postive payoff at time i = 0 and a non-negative payoff at time i = 1 would be purchasing the bond that matures at time i = 1 and lending money at f~0~. The cashflows from this strategy would be:  
+
+i  | CF from B~1~ | CF from Lending | Total
+-- | ------------ | --------------- | -----
+0  |    -.90      |    .93          | .03
+1  |     1        |    -1           | 0
+
+
