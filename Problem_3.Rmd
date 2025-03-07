@@ -29,4 +29,14 @@ i  | CF from B~1~ | CF from Lending | Total
 0  |    -.90      |    .93          | .03
 1  |     1        |    -1           | 0
 
+(c) Given a default-free zero-coupon bond, B~n~ that matures at time $t = n$, and all the forward rates {f~0~, ..., f~n-1~} obtain a formula that expresses B~n~ as a function of f~i~.  
+$$B_n = \prod_{i=0}^{n-1} \frac{1}{1+f_i}$$
+
+(d) Consider the system below. Can the B~i~ be determined independently?
+$$\begin{bmatrix} B_1 \\B_2 \\B_3 \\B_4 \\ \end{bmatrix} = \begin{bmatrix} 1 & 1 \\ B_2^u & B_2^d \\B_3^u & B_3^d \\B_4^u & B_4^d \end{bmatrix} \begin{bmatrix} \psi_1 \\ \psi_2\end{bmatrix}$$  
+No, all the B~i~ depend on the same underlying term structure. 
+
+(e) In the above system, can all the {f~i~} be determined independently?
+
+No they cannot. The forward rates are defined recursively. So forward rates with longer time horizons depend on forward rates with shorter time horizons. 
 
