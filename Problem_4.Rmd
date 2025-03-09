@@ -1,0 +1,29 @@
+---
+title: "Problem_4"
+output: pdf_document
+date: "2025-03-09"
+---
+
+Suppose you are given the following information:
+
+* Assume no-arbitrage 
+* It is currently time 0
+* A policyholder has an initial investment of 200,000 and receives direct participation rate p~dp~ on their investment
+* The continuous (flat) interest rate is r = 2% 
+* The time horizon is T = 1 year
+* S~t~ denotes the stock price at time t
+* One unit of at-the-money European option A has a payoff of $max[ \frac{S_1}{S_0}-1,0]$
+* One unit of option A costs $0.04 for purchase today 
+
+If the insurer replicates the guarantee by purchasing a zero-coupon bond and call options, and assuming no-arbitrage, determine the dollar position they should invest in:  
+
+(a) Zero coupon bonds 
+$$ 200,000e^{-.02*1} = 196,039.74$$
+
+(b) Risk budget spent on options
+$$ 200,000 - 196,039.74 = 3,960.26$$
+
+(c) Determine p~dp~
+$$ V_0*p_{dp}=1-e^{-.02}$$
+$$ .04 * p_{dp} = 1-e^{-.02}$$
+$$p_{dp} = \frac{1-e^{-.02}}{.04}=49.5 \%$$
