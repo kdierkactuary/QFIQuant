@@ -1,7 +1,6 @@
 ---
 title: "Problem_4"
 output: pdf_document
-date: "2025-03-09"
 ---
 
 Suppose you are given the following information:
@@ -27,3 +26,25 @@ $$ 200,000 - 196,039.74 = 3,960.26$$
 $$ V_0*p_{dp}=1-e^{-.02}$$
 $$ .04 * p_{dp} = 1-e^{-.02}$$
 $$p_{dp} = \frac{1-e^{-.02}}{.04}=49.5 \%$$
+
+(d) State the cost of options f and g (according to the notation set up in (QFIQ-132) 
+
+* The cost of option f is .04
+* The cost of option g is $200,000 * .04 = 8,000$
+
+(e) Suppose the stock return over the holding period is 6%. Show all cash flows to the insurer at maturity.  
+
+The payoff from the zero coupon bond is:
+$$200,000$$
+
+The payoff of the option is:  
+$$ 6\% * 200,000 * 49.5\% = 5,940 $$
+The policyholder receives:
+$$200,000+ 200,000 * 49.5\% * 6 \% = 205,940 $$ 
+The net cash flow to the insurer is 0. 
+
+(f) State the three drawbacks of the VolTarget mechanism. 
+
+1. Only works well in specific markets. The VolTarget mechanism works well in falling markets with high volatility or rising markets with low volatility. For atypical market conditions outside of these two it can be an ineffective strategy. 
+2. The rule-based nature of the strategy can lead to significant losses in nonstandard market environments like a falling market with low volatility. 
+3. May not be sufficient to solely define portfolio management decisions and should be combined with other asset allocation strategies. 
