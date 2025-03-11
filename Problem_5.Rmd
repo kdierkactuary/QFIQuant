@@ -1,0 +1,23 @@
+---
+title: "Problem_5"
+output: pdf_document
+
+---
+
+You are given that:
+
+* $\varepsilon_t = exp[\int_{0}^{t} \gamma_u \; dW_u - \frac{1}{2} \int_{0}^{t} \gamma_u^2 \; du ]$
+* $\gamma_u$ is assumed to be deterministic and continuous in t and the integral $\int_{0}^{t} \gamma_u \; dW_u$ is well defined
+* For all $t \ge 0$, the following non-explosiveness condition holds:
+$$ exp(\int_{0}^{t} \gamma_u^2 \; du) < \infty$$
+* Under $\mathbb{P}$, $W_t$ is a standard Wiener process  
+
+(a) Determine the distribution of $\int_{0}^{t} \gamma_u \; dW_u$ under $\mathbb{P}$ 
+$\int_{0}^{t} \gamma_u \; dW_u$ is an Ito integral. So:
+$$\int_{0}^{t} \gamma_u \; dW_u \sim {\sf \mathcal{N}}(0, \int_{0}^{t} \gamma_u^2 \; du)$$
+(b) Calculate $E^\mathbb{P}(\varepsilon_t)$
+$$E^\mathbb{P}(\varepsilon_t) = E^\mathbb{P}(exp[\int_{0}^{t} \gamma_u \; dW_u - \frac{1}{2} \int_{0}^{t} \gamma_u^2 \; du ])$$
+From part (a), we know this is a log-normal random variable with parameters $\mu = -\frac{1}{2} \int_{0}^{t} \gamma_u^2 \; du$ and $\sigma^2 = \int_{0}^{t} \gamma_u^2 \; du$. So, the expected value of $\varepsilon_t$ is:
+$$E^\mathbb{P}(\varepsilon_t) = e^{\mu+\frac{1}{2}\sigma^2}$$
+$$E^\mathbb{P}(\varepsilon_t) = e^{-\frac{1}{2} \int_{0}^{t} \gamma_u^2 \; du+\frac{1}{2} \int_{0}^{t} \gamma_u^2 \; du}$$
+$$E^\mathbb{P}(\varepsilon_t) = 1$$
