@@ -27,12 +27,13 @@ $$ d\varepsilon_t = d[e^{\int_{0}^{t} \gamma_u \; dW_u - \frac{1}{2}\int_{0}^{t}
 Let $Y_t = \int_{0}^{t} \gamma_u \; dW_u$. Then 
 
 $$ \varepsilon_t = f(Y_t, t) = e^{Y_t - \frac{1}{2}\int_{0}^{t} \gamma_u^2 \; du} $$
-Using Ito's lemma:
+First, note that:
 
 $$ f_t = -\frac{1}{2} \gamma_t^2 \varepsilon_t $$
 $$ f_{Y_t} = f_{Y_tY_t} = \varepsilon_t $$
 $$d_{Y_t} = \gamma_t dW_t$$
 $$(d_{Y_t})^2 = \gamma_t^2 dt$$
+Then using Ito's lemma:
 $$ d\varepsilon_t = f_t dt + f_{Y_t} dY_t + \frac{1}{2} f_{Y_tY_t}(dY_t)^2 $$
 $$ = -\frac{1}{2} \gamma_t^2 \varepsilon_t dt + \varepsilon_t dY_t + \frac{1}{2} \varepsilon_t (dY_t)^2 $$
 
@@ -40,4 +41,5 @@ $$ = -\frac{1}{2} \gamma_t^2 \varepsilon_t dt + \varepsilon_t \gamma_t dW_t + \f
 
 $$ = \varepsilon_t \gamma_t dW_t  $$
 
-Therefore $d\varepsilon_t = \varepsilon_t \gamma_t dW_t $
+Therefore, 
+$$d\varepsilon_t = \varepsilon_t \gamma_t dW_t $$
