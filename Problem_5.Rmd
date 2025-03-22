@@ -21,3 +21,23 @@ From part (a), we know this is a log-normal random variable with parameters $\mu
 $$E^\mathbb{P}(\varepsilon_t) = e^{\mu+\frac{1}{2}\sigma^2}$$
 $$E^\mathbb{P}(\varepsilon_t) = e^{-\frac{1}{2} \int_{0}^{t} \gamma_u^2 \; du+\frac{1}{2} \int_{0}^{t} \gamma_u^2 \; du}$$
 $$E^\mathbb{P}(\varepsilon_t) = 1$$
+(c) Determine the stochastic differential equation for $d\varepsilon_t$ under $\mathbb{P}$
+
+$$ d\varepsilon_t = d[e^{\int_{0}^{t} \gamma_u \; dW_u - \frac{1}{2}\int_{0}^{t} \gamma_u^2 \; du}]$$
+Let $Y_t = \int_{0}^{t} \gamma_u \; dW_u$. Then 
+
+$$ \varepsilon_t = f(Y_t, t) = e^{Y_t - \frac{1}{2}\int_{0}^{t} \gamma_u^2 \; du} $$
+Using Ito's lemma:
+
+$$ f_t = -\frac{1}{2} \gamma_t^2 \varepsilon_t $$
+$$ f_{Y_t} = f_{Y_tY_t} = \varepsilon_t $$
+$$d_{Y_t} = \gamma_t dW_t$$
+$$(d_{Y_t})^2 = \gamma_t^2 dt$$
+$$ d\varepsilon_t = f_t dt + f_{Y_t} dY_t + \frac{1}{2} f_{Y_tY_t}(dY_t)^2 $$
+$$ = -\frac{1}{2} \gamma_t^2 \varepsilon_t dt + \varepsilon_t dY_t + \frac{1}{2} \varepsilon_t (dY_t)^2 $$
+
+$$ = -\frac{1}{2} \gamma_t^2 \varepsilon_t dt + \varepsilon_t \gamma_t dW_t + \frac{1}{2} \varepsilon_t \gamma_t^2 dt $$
+
+$$ = \varepsilon_t \gamma_t dW_t  $$
+
+Therefore $d\varepsilon_t = \varepsilon_t \gamma_t dW_t $
