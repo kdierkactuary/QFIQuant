@@ -43,3 +43,16 @@ $$ = \varepsilon_t \gamma_t dW_t  $$
 
 Therefore, 
 $$d\varepsilon_t = \varepsilon_t \gamma_t dW_t $$
+(d) Simplify the following quantity: $E^\mathbb{P}[exp(\int_{0}^{t} (\alpha + \gamma_u) dW_u - \frac{1}{2} \int_{0}^{t}(\alpha + \gamma_u)^2du)]$
+
+The quantity is log-normally distributed since $\int_{0}^{t} (\alpha + \gamma_u) dW_u$ is an Ito integral. 
+The mean of a log-normal distribution is $e^{\mu + \frac{1}{2} \sigma^2}$
+
+$$ \mu = - \frac{1}{2} \int_{0}^{t}(\alpha + \gamma_u)^2du  $$
+$$ \sigma^2 = \int_{0}^{t} (\alpha + \gamma_u)^2 du$$
+$$E^\mathbb{P}[exp(\int_{0}^{t} (\alpha + \gamma_u) dW_u - \frac{1}{2} \int_{0}^{t}(\alpha + \gamma_u)^2du)] = exp(- \frac{1}{2} \int_{0}^{t}(\alpha + \gamma_u)^2du + \frac{1}{2} \int_{0}^{t} (\alpha + \gamma_u)^2 du) $$
+$$  = e^0 = 1 $$
+
+
+Additionally you are given that: $\overline{W_t} = W_t - \int_{0}^{t} \gamma_u du$
+
