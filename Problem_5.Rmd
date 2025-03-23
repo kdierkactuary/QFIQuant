@@ -54,8 +54,28 @@ $$E^\mathbb{P}[exp(\int_{0}^{t} (\alpha + \gamma_u) dW_u - \frac{1}{2} \int_{0}^
 $$  = e^0 = 1 $$
 
 
-Additionally you are given that: $\overline{W_t} = W_t - \int_{0}^{t} \gamma_u du$
+Additionally you are given that: $\overline{W_t} = W_t - \int_{0}^{t} \gamma_u du$    
 
 (e) Prove that:
 $$ E^\mathbb{Q}[exp(\alpha \overline{W_t})] = E^\mathbb{P}[exp(\int_{0}^{t} (\alpha + \gamma_u) dW_u - \frac{1}{2} \int_{0}^{t}(2\alpha\gamma_u + \gamma_u^2)du)] = e^{\frac{\alpha^2t}{2}}$$
+$$ E^\mathbb{Q}[exp(\alpha \overline{W_t})] = E^\mathbb{Q}[exp(\alpha(W_t - \int_{0}^{t} \gamma_u du))]$$
+To convert between $\mathbb{Q}$ and $\mathbb{P}$ one must multiply by the Radon-Nikodym derivative,
+$$E^\mathbb{Q}[exp(\alpha \overline{W_t})] = E^\mathbb{P}[exp(\alpha(W_t - \int_{0}^{t} \gamma_u du) + \int_{0}^{t} \gamma_u \; dW_u - \frac{1}{2} \int_{0}^{t} \gamma_u^2 \; du )]$$
+$$ = E^\mathbb{P}[exp(\alpha W_t - \int_{0}^{t} \alpha \gamma_u du + \int_{0}^{t} \gamma_u \; dW_u - \frac{1}{2} \int_{0}^{t} \gamma_u^2 \; du )] $$
+$$ = E^\mathbb{P}[exp(\int_{0}^{t} \alpha dW_u - \int_{0}^{t} \alpha \gamma_u du + \int_{0}^{t} \gamma_u \; dW_u - \frac{1}{2} \int_{0}^{t} \gamma_u^2 \; du )] $$
+$$ = E^\mathbb{P}[exp(\int_{0}^{t} (\alpha + \gamma_u) dW_u - \int_{0}^{t} \alpha \gamma_u du - \frac{1}{2} \int_{0}^{t} \gamma_u^2 \; du )] $$
+$$ = E^\mathbb{P}[exp(\int_{0}^{t} (\alpha + \gamma_u) dW_u    - \frac{1}{2} \int_{0}^{t} (2\alpha \gamma_u + \gamma_u^2 )\; du )] $$
+So, 
+
+$$ E^\mathbb{Q}[exp(\alpha \overline{W_t})] = E^\mathbb{P}[exp(\int_{0}^{t} (\alpha + \gamma_u) dW_u    - \frac{1}{2} \int_{0}^{t} (2\alpha \gamma_u + \gamma_u^2 )\; du )]$$
+Note, $exp(\int_{0}^{t} (\alpha + \gamma_u) dW_u    - \frac{1}{2} \int_{0}^{t} (2\alpha \gamma_u + \gamma_u^2) \; du )$ is log-normally distributed. So,
+
+$$ \mu = - \frac{1}{2} \int_{0}^{t} (2\alpha \gamma_u + \gamma_u^2 )\; du $$
+$$ \sigma^2 = \int_{0}^{t} (\alpha + \gamma_u)^2 du$$
+$$E^\mathbb{P}[exp(\int_{0}^{t} (\alpha + \gamma_u) dW_u    - \frac{1}{2} \int_{0}^{t} (2\alpha \gamma_u + \gamma_u^2 )\; du )] = e^{\mu + \frac{1}{2} \sigma^2} $$
+$$= exp(- \frac{1}{2} \int_{0}^{t} (2\alpha \gamma_u + \gamma_u^2 )\; du + \frac{1}{2} \int_{0}^{t} (\alpha + \gamma_u)^2 du)$$
+$$ = exp(- \frac{1}{2} \int_{0}^{t} (2\alpha \gamma_u + \gamma_u^2 )\; du + \frac{1}{2} \int_{0}^{t} (\alpha^2 + 2\alpha\gamma_u+\gamma_u^2) du)$$
+$$ = exp(- \frac{1}{2} \int_{0}^{t} (2\alpha \gamma_u + \gamma_u^2 )\; du + \frac{1}{2} \int_{0}^{t} (2\alpha\gamma_u+\gamma_u^2) du + \frac{1}{2}\int_{0}^{t}\alpha^2 du)$$
+$$ = exp(\frac{1}{2}\int_{0}^{t}\alpha^2 du)$$
+$$ = e^{\frac{\alpha^2t}{2}}$$
 
