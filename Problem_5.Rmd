@@ -56,3 +56,6 @@ $$  = e^0 = 1 $$
 
 Additionally you are given that: $\overline{W_t} = W_t - \int_{0}^{t} \gamma_u du$
 
+(e) Prove that:
+$$ E^\mathbb{Q}[exp(\alpha \overline{W_t})] = E^\mathbb{P}[exp(\int_{0}^{t} (\alpha + \gamma_u) dW_u - \frac{1}{2} \int_{0}^{t}(2\alpha\gamma_u + \gamma_u^2)du)] = e^{\frac{\alpha^2t}{2}}$$
+
