@@ -79,4 +79,12 @@ $$ = exp(- \frac{1}{2} \int_{0}^{t} (2\alpha \gamma_u + \gamma_u^2 )\; du + \fra
 $$ = exp(\frac{1}{2}\int_{0}^{t}\alpha^2 du)$$
 $$ = e^{\frac{\alpha^2t}{2}}$$
 (f) Identify the distribution of $\over{W_t}$ under the probability measure $\mathbb{Q}$.  
-$\over{W_t}$ is normally distributed with mean $\mu= 0$ and variance $\sigma^2 = t$.
+$\over{W_t}$ is normally distributed with mean $\mu= 0$ and variance $\sigma^2 = t$.  
+
+(g) Is the Radon-Nikodym derivative a martingale under $\mathbb{P}$?  
+Yes, the Radob-Nikodym derivative is a martingale under $\mathbb{P}$. We can see this from part (c). The stochastic differential equation $d\epsilon_t$ has no drift term. 
+
+(h) Suppose that $\gamma_t=0$ for all t. In this case, what is the value of the Radon-Nikodym derivative?  
+The value of the Radon-Nikodym derivative is
+$$\varepsilon_t = e^{\int_{0}^{t}\gamma_u \;dW_u - \frac{1}{2}\int_{0}^{t} \gamma_u^2 \;du}$$
+$$ = e^{0} = 1$$
