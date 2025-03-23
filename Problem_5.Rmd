@@ -78,4 +78,5 @@ $$ = exp(- \frac{1}{2} \int_{0}^{t} (2\alpha \gamma_u + \gamma_u^2 )\; du + \fra
 $$ = exp(- \frac{1}{2} \int_{0}^{t} (2\alpha \gamma_u + \gamma_u^2 )\; du + \frac{1}{2} \int_{0}^{t} (2\alpha\gamma_u+\gamma_u^2) du + \frac{1}{2}\int_{0}^{t}\alpha^2 du)$$
 $$ = exp(\frac{1}{2}\int_{0}^{t}\alpha^2 du)$$
 $$ = e^{\frac{\alpha^2t}{2}}$$
-
+(f) Identify the distribution of $\over{W_t}$ under the probability measure $\mathbb{Q}$.  
+$\over{W_t}$ is normally distributed with mean $\mu= 0$ and variance $\sigma^2 = t$.
