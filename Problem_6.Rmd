@@ -1,0 +1,12 @@
+---
+title: "Problem_6"
+output: pdf_document
+date: "2025-03-28"
+---
+
+(a) Consider $Z(t)=e^{\sigma W_t - \alpha t}$ For what value of $\alpha$ is $Z$ a martingale?  
+Recall that,
+$$E[e^{\sigma W_t}] = e^{\mu + \frac{1}{2}\sigma^2} = e^{\frac{1}{2}\sigma^2t} $$
+So for $Z(t)$ to be a martingale we need $E_t[Z(T)]=Z(t)$. So we choose $\alpha = \frac{1}{2} \sigma^2$
+$$E_t[Z(T)] = Z(t) e^{\frac{1}{2}\sigma^2(T-t)}e^{-\alpha(T-t)}$$
+$$= Z(t)e^{\frac{1}{2}\sigma^2(T-t)}e^{-\frac{1}{2} \sigma^2(T-t)} = Z(t)$$
