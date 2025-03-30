@@ -10,3 +10,52 @@ $$E[e^{\sigma W_t}] = e^{\mu + \frac{1}{2}\sigma^2} = e^{\frac{1}{2}\sigma^2t} $
 So for $Z(t)$ to be a martingale we need $E_t[Z(T)]=Z(t)$. So we choose $\alpha = \frac{1}{2} \sigma^2$
 $$E_t[Z(T)] = Z(t) e^{\frac{1}{2}\sigma^2(T-t)}e^{-\alpha(T-t)}$$
 $$= Z(t)e^{\frac{1}{2}\sigma^2(T-t)}e^{-\frac{1}{2} \sigma^2(T-t)} = Z(t)$$
+Next, consider under Black-Scholes that a stock price process $S_t$ and a derivative security $D_t$ written on this stock have prices given by:
+$$S_t = S_0 e^{2W^\mathbb{P}_t+.2t}$$
+$$D_t = 2 e^{6W^\mathbb{P}_t+.39t}$$
+$W^\mathbb{P}_t$ is a standard Brownian motion under the real world measure $\mathbb{P}$.  
+$W^\mathbb{Q}_t$ is a standard Brownian motion under the risk neutral measure $\mathbb{Q}$.  
+There is a constant, continuous risk-free rate r. 
+
+(b) $W^\mathbb{Q}_t=W^\mathbb{P}_t+kt$. Solve for k.  
+[Hint: Notice that $e^{-rt}S_t$ and $e^{-rt}D_t$ are martingales under $\mathbb{Q}$]
+$$e^{-rt}S_t=e^{-rt}S_0e^{.2W^\mathbb{P}_t+.2t}$$
+$$=S_0 e^{.2(W^\mathbb{Q}_t-kt)-rt+.2t}$$
+$$=S_0 e^{.2W^\mathbb{Q}_t-(r-.2+.2k)t}$$
+From part (a), we know that in order for $e^{-rt}S_t$ to be a martingale it must be that:
+$$\frac{1}{2}(.2)^2=r-.2+.2k$$
+For the derivative,
+$$e^{-rt}D_t = e^{-rt}2e^{.6W^\mathbb{P}_t+.39t}$$
+$$= 2e^{.6(W^\mathbb{Q}_t - kt)-rt+.39t}$$
+$$= 2e^{.6W^\mathbb{Q}_t-(r-.39+.6k)t}$$
+From part (a), we know that in order for $e^{-rt}D_t$ to be a martingale it must be that:
+$$\frac{1}{2}(.6)^2=r-.39+.6k$$
+Now solve the below system of equations for k.  
+$$\frac{1}{2}(.2)^2 = r-.2+.2k$$
+$$\frac{1}{2}(.6)^2=r-.39+.6k$$
+$$.57 - .6k = r$$
+
+$$.02 = r - .2 + .2k$$
+$$ .22 = .57 - .6k +.2k$$
+$$-.35 = -.4k$$
+$$k = .875$$
+
+(c) Solve for r. 
+$$r = .57 - .6k$$
+$$= .57 - .6(.875)$$
+$$ = .045$$
+(d) Your coworker is used to applying Girsanov's theorem in the below form:
+$$ W^\mathbb{Q}_t = W^\mathbb{P}_t - \int_{0}^{t}X_u du$$
+Help your coworker by selecting the appropriate value for $X_u$. For the appropriate value of $X_u$, will this statement mean the same thing as part (b).  
+
+Yes, for the appropriate value of $X_u$ this can be stated the same way as part (b). 
+$$X_u = -k = -.875$$
+So,
+$$W^\mathbb{Q}_t = W^\mathbb{P}_t + .875 \int_{0}^{t} du = W^\mathbb{P}_t + .875t$$
+
+
+
+
+
+
+
