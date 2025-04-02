@@ -1,0 +1,24 @@
+---
+title: "Problem_7"
+output: pdf_document
+date: "2025-04-02"
+---
+
+The market risk actuary for an insurance company is looking at different short rate models to use to model interest rates for pricing variable annuity guarantees. The model that has traditionally been used is the Vasicek model with dynamics given by:  
+$$dr_t = \gamma(\overline{r} - r_t)dt + \sigma dX_t$$
+The market risk actuary calibrates the model to zero-coupon bond prices observed in the market to determine that $\gamma=0.2$, $\overline{r}=0.04$, and $\sigma=0.05$. Assume the current value of the instantaneous short-rate is $r_0=0.03$.  
+
+(a) Determine the risk-neutral probability that the instantaneous short rate will be negative in 4 years. 
+
+$$E[r_t]=r_0e^{-\gamma t} + \overline{r}(1-e^{- \gamma t})$$
+$$= .03 e^{-.2(4)} + .04 (1 - e^{-.2(4)})$$
+$$=.035507$$
+
+$$Var[r_t] = \frac{\sigma ^ 2}{2 \gamma}(1 - e^{-2 \gamma t})$$
+$$= \frac{.05^2}{2(.2)}(1-e^{-2(.2)(4)})$$
+$$= .004988$$
+
+$$P[r_4 < 0] = P[\frac{r_4 - \mu}{\sigma} < \frac{0 - \mu}{\sigma}]$$
+$$= P[Z < \frac{0 - .035507}{\sqrt{.004988}}]$$
+$$= \Phi(-0.50274)$$
+$$= .30757$$
