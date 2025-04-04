@@ -22,3 +22,23 @@ $$P[r_4 < 0] = P[\frac{r_4 - \mu}{\sigma} < \frac{0 - \mu}{\sigma}]$$
 $$= P[Z < \frac{0 - .035507}{\sqrt{.004988}}]$$
 $$= \Phi(-0.50274)$$
 $$= .30757$$
+
+(b) Describe the strengths and weaknesses of using the Vasicek model for modeling interest rates.  
+* Strengths:
+    + **Mean Reverting**- the model is mean reverting which matches the empirical behavior for interest rates. 
+    + **Simple** - the model is simple and easy to understand. 
+    + **Analytically Tractable** - the model is analytically tractable and has closed form formulas for zero-coupon bond prices and certain interest rate derivatives. 
+* Weaknesses:
+    + **Single Factor Model** - the Vasicek model is a single factor model. So it is only able to model parallel movements in the yield curve and is unable to match more complex dynamics of the yield curve. 
+    + **Unable to reproduce market term structure** - The standard Vasicek model is unable to reproduce the market term structure of zero-coupon bonds. 
+    + **Negative Interest Rates** - the Vasicek model allows for negative interest rates. Which is incompatible with the empirical evidence. 
+  
+(c) The market risk actuary would like a one factor interest rate model that does not allow for negative interest rates.  Describe two alternative models the market risk actuary could use. 
+  Two alternative one factor interest rate models that do not allow for negative interest rates are:
+* **Cox-Ingersoll-Ross** - An extension of the Vasicek model that eliminates the possibility of negative interest rates.
+    + $dr_t=\gamma(\overline{r} - r_t)dt + \sigma \sqrt{r_t}dX_t$
+* **Black-Karasinski** - A log-normal interest rate model. 
+    + $y_t = ln(r_t)$
+    + $dy_t = (\theta_t - \gamma_t y_t)dt + \sigma_tdX_t$
+  
+    
