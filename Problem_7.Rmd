@@ -40,5 +40,20 @@ $$= .30757$$
 * **Black-Karasinski** - A log-normal interest rate model. 
     + $y_t = ln(r_t)$
     + $dy_t = (\theta_t - \gamma_t y_t)dt + \sigma_tdX_t$
+
+(d) How can the market risk actuary modify the Vasicek model so that it can reproduce zero-coupon bond prices observed in the market. 
+
+  The actuary could make the parameters of the Vasicek model time dependent. Then he could select the parameters such that the zero-coupon bond prices produced by the model match the observed market zer0-coupon bond prices. 
+  
+(e) Describe the advantages of using a two factor model over using a one factor model for interest rates. 
+1. A two factor model allows you to model changes in the term structure of interest rates in addition to parallel shifts in the yield curve. 
+2. Two factor models can reproduce zero-coupon bond prices and the initial term structure observed in the market. 
+
+(f) From all the models suggested so far, make a recommendation for which interest rate model the company should use going forward. Justify your answer.  
+* I would recommend the company use a two factor Hull-White model
+* Since it is a two factor model it is able to model both parallel changes in the yield curve and changes in the term structure of interest rates
+* The model is analytically tractable with formulas for zero-coupon bond prices and certain interest rate derivatives. 
+* The model is able to match the market observed zero-coupon bond prices and term structure.
+* The model can also be calibrated to the volatility term structure. 
   
     
