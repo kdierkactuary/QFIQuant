@@ -5,6 +5,7 @@ date: "2025-04-08"
 ---
 
 Insurance company XYZ has hired you to help manage the financial risks of its newly created variable annuity blcok. The company recently introduced a variable annuity contract with a Guaranteed Minimum Accumulation Benefity (GMAB).  
+
 * Under GMAB, if the policyholder's account value in three years is less than 95% of the initial premium amount, then the account value will be reset to 95% of the initial premium.  
 
 (a) Your manager is interested in learning about how the volatility term structure changes when markets crash. Compare the implied volatilities of short and long-term options under "normal" market conditions with their levels under "extreme" conditions. 
@@ -22,7 +23,8 @@ $$S_t = \mbox{ index valute at time t }$$
 1. The curvature of the volatility smile is the same for out of the money calls and out of the money puts. Empirically, the curvature for out of the money puts exceeds that of out of the money calls. 
 2. The curvature of the volatility smile is more pronounced for longer maturities. Empirically, the skew starts to taper off and become less curved for longer maturities.  
 
-You are also given the following market assumptions:   
+You are also given the following market assumptions:  
+
 * The current index level at issue is $S_0 = 100$   
 * The dividend rate $\delta = 0%$  
 * The risk-free rate $r= 3 \%$  
@@ -51,3 +53,10 @@ $$\Delta_{undecremented} = (N(d_1)-1) + \displaystyle \frac{\partial Black(S,T,K
 $$ = (.7140 - 1) + 58.8993(.002945) = -0.11252$$
 
 $$\Delta_{decremented} = -.11252(.98)^3(.96)(.92)^2 =-0.08605$$
+
+(d) Compare and contrast the USDJPY FX volatility smile with the USDRMB volatility smile that is typically observed in the market.  
+* The USDJPY volatility smile should be roughly symmetric, since the currencies are roughly of equal strength. 
+* The USDRMB volatility smile should exhibit more skew since the RMB is generally weaker and more volatile than the USD. The RMB is more likely to rapidly fall in value relative to USD. This will create higher demand for out of the money puts relative to out of the money puts. 
+
+
+
